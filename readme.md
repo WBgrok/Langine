@@ -19,7 +19,7 @@ object -> [(value1, weight), (value2, weight)]
 
 with values being any string, where if a word is preceded by $ we attempt to expand the entity. This, as in the example above, can be recursive.
 
-This has defined a small (context-free grammar)[https://en.wikipedia.org/wiki/Context-free_grammar] - we can then ask for an object to be generated - this will be done expanding $-prefixed tags into their own strings, following the weightings, so for instance askng for a noun might return "cat" or "saucepan", with a smaller chance of somethign like "blue saucepan" or an even smaller one of "ridiculous small cat".
+This has defined a small [context-free grammar](https://en.wikipedia.org/wiki/Context-free_grammar) - we can then ask for an object to be generated - this will be done expanding $-prefixed tags into their own strings, following the weightings, so for instance askng for a noun might return "cat" or "saucepan", with a smaller chance of somethign like "blue saucepan" or an even smaller one of "ridiculous small cat".
 
 
 ### Worked example - yoga instructions generator
