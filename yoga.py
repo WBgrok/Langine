@@ -93,9 +93,10 @@ ph = langine.phrase(
     ("and relax", 1),
     ("let $article $ng go", 1),
     ("be present for $article $noun ", 1),
-    ("and as you $verb", 1),
-    ("fully present for the $ng now", 1),
+    ("$ph and as you $verb $ph", 1),
+    ("be ully present for the $ng now", 1),
     ("feel your in-breath through $article $ng", 1),
     ("bend your $article $ng and $verb trhough it", 1),
+    ("$ph and $ph", 1),
   ]
 )
