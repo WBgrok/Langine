@@ -133,17 +133,19 @@ ph = langine.phrase(
   ]
 )
 ```
-Assuming all of the above has been pasted in an interactive shell:
+
+Giving it a spin:
 
 ```
+>>> execfile('yoga.py')
 >>> ph.generate()
-'align your left toes in line with the collarbone'
+'pull your nostril over the left toes'
 >>> ph.generate()
-'fully present for the left back now'
+'push the right hip away from your collarbone'
 >>> ph.generate()
-'feel your in-breath through the leg'
+'and relax'
 >>> ph.generate()
-'breathe through the torso'
+'breathe through the pelvis'
 ```
 
 
