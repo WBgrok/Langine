@@ -10,6 +10,7 @@ Uses weighted random string expansion to generate entertaining gobbledygook.
 Let's say for instance we define the following objects:
 
 adjective -> [("blue", 1), ("small", 1), ("ridiculous", 1)]
+
 noun -> [("flower", 10), ("cat", 10), ("saucepan", 7), ("$adjective $noun", 5)]
 
 where the above reads:
