@@ -9,6 +9,9 @@ class controller(object):
   def add(self, word):
     self.words.update({word.key: word})
 
+  def create(self, key, items=list()):
+    return phrase(key, self, items)
+
   def get(self, key):
     if key[0] == '$':
       key2 = key[1:]
