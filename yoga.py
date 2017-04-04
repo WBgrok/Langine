@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 import langine
 
 yoga = langine.controller()
@@ -5,15 +7,15 @@ yoga = langine.controller()
 full_noun_group = langine.phrase(
   'fng',
   yoga,
-  [("$article $ng", 1)],
+  [("$article $ng", 10)],
 )
 
 noun_group = langine.phrase(
   'ng',
   yoga,
   [
-    ("$noun", 1),
-    ("$adj $noun", 1)
+    ("$noun", 10),
+    ("$adj $noun", 10)
   ],
 )
 
@@ -50,12 +52,12 @@ adj = langine.phrase(
   'adj',
   yoga,
   [
-    ("left", 3),
-    ("right", 3),
-    ("upper right", 1),
-    ("lower right", 1),
-    ("upper left", 1),
-    ("lower left", 1),
+    ("left", 30),
+    ("right", 30),
+    ("upper right", 10),
+    ("lower right", 10),
+    ("upper left", 10),
+    ("lower left", 10),
   ]
 )
 
@@ -63,8 +65,8 @@ article = langine.phrase(
   'article',
   yoga,
   [
-    ("the", 1),
-    ("your", 1),
+    ("the", 10),
+    ("your", 10),
   ],
 )
 
@@ -74,10 +76,10 @@ direction = langine.phrase(
   [
     ("towards", 2),
     ("away from", 2),
-    ("in line with", 1),
-    ("over", 1),
-    ("across", 1),
-    ("inside", 1),
+    ("in line with", 10),
+    ("over", 10),
+    ("across", 10),
+    ("inside", 10),
   ],
 )
 
@@ -85,15 +87,17 @@ verb = langine.phrase(
   'verb',
   yoga,
   [
-    ("push", 3),
-    ("pull", 3),
-    ("breathe", 1),
-    ("expand", 1),
-    ("exhale", 1),
-    ("inhale", 1),
-    ("align", 2),
-    ("release", 2),
-    ("stretch", 1),
+    ("push", 30),
+    ("pull", 30),
+    ("breathe", 10),
+    ("expand", 10),
+    ("exhale", 10),
+    ("inhale", 10),
+    ("align", 5),
+    ("release", 5),
+    ("stretch", 10),
+    ("relax", 10),
+    ("straighten", 10)
   ],
 )
 
@@ -103,18 +107,19 @@ ph = langine.phrase(
   [
     ("$verb $fng $dir $fng", 10),
     ("breathe through $article $noun", 2),
-    ("and relax", 1),
-    ("let $fng go", 1),
-    ("be present in $article $noun ", 1),
-    ("$ph and as you $verb $ph", 1),
-    ("be fully present for the $ng now", 1),
-    ("feel your in-breath through $fng", 1),
-    ("bend your $fng and $verb through it", 1),
-    ("$phrase and $phrase", 1),
+    ("and relax", 10),
+    ("$verb $fng", 10),
+    ("let $fng go", 10),
+    ("be present in $article $noun ", 10),
+    ("$phrase and as you $verb $phrase", 10),
+    ("be fully present for the $ng now", 10),
+    ("feel your in-breath through $fng", 10),
+    ("bend your $fng and $verb through it", 10),
+    ("$phrase and $phrase", 10),
     ("$verb $dir $fng", 2),
-    ("$phrase with $fng above $fng", 1),
-    ("keeping $fng $dir $fng", 1),
-    ("straighten $fng", 1)
-
+    ("$phrase with $fng above $fng", 10),
+    ("keeping $fng $dir $fng", 10),
   ]
 )
+
+print ph.generate()
