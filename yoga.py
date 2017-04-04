@@ -2,6 +2,12 @@ import langine
 
 yoga = langine.controller()
 
+full_noun_group = langine.phrase(
+  'fng',
+  yoga,
+  [("$article $ng", 1)],
+)
+
 noun_group = langine.phrase(
   'ng',
   yoga,
@@ -15,22 +21,28 @@ noun = langine.phrase(
   'noun',
   yoga,
   [
-    ("arm", 1),
-    ("leg", 1),
-    ("torso", 1),
-    ("fingertip", 1),
-    ("toes", 1),
-    ("toe", 1),
-    ("pelvis", 1),
-    ("hip", 1),
-    ("knee", 1),
-    ("thigh", 1),
-    ("back", 1),
-    ("nostril", 1),
-    ("collarbone", 1),
-    ("wrist", 1),
-    ("forearm", 1),
-    ("eyeball", 1),
+    ("arm", 10),
+    ("leg", 10),
+    ("torso", 10),
+    ("fingertip", 10),
+    ("toes", 10),
+    ("toe", 10),
+    ("pelvis", 10),
+    ("hip", 10),
+    ("knee", 10),
+    ("thigh", 10),
+    ("back", 10),
+    ("nostril", 10),
+    ("collarbone", 10),
+    ("wrist", 10),
+    ("forearm", 10),
+    ("eyeball", 10),
+    ("coccyx", 5),
+    ("spleen", 5),
+    ("knuckle", 5),
+    ("hamstring", 5),
+    ("heel", 5),
+    ("shoulder", 5),
   ],
 )
 
@@ -65,6 +77,7 @@ direction = langine.phrase(
     ("in line with", 1),
     ("over", 1),
     ("across", 1),
+    ("inside", 1),
   ],
 )
 
@@ -88,15 +101,20 @@ ph = langine.phrase(
   'phrase',
   yoga,
   [
-    ("$verb $article $ng $dir $article $ng", 10),
+    ("$verb $fng $dir $fng", 10),
     ("breathe through $article $noun", 2),
     ("and relax", 1),
-    ("let $article $ng go", 1),
-    ("be present for $article $noun ", 1),
+    ("let $fng go", 1),
+    ("be present in $article $noun ", 1),
     ("$ph and as you $verb $ph", 1),
-    ("be ully present for the $ng now", 1),
-    ("feel your in-breath through $article $ng", 1),
-    ("bend your $article $ng and $verb trhough it", 1),
-    ("$ph and $ph", 1),
+    ("be fully present for the $ng now", 1),
+    ("feel your in-breath through $fng", 1),
+    ("bend your $fng and $verb through it", 1),
+    ("$phrase and $phrase", 1),
+    ("$verb $dir $fng", 2),
+    ("$phrase with $fng above $fng", 1),
+    ("keeping $fng $dir $fng", 1),
+    ("straighten $fng", 1)
+
   ]
 )
