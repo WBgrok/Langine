@@ -24,7 +24,7 @@ This has defined a small [context-free grammar](https://en.wikipedia.org/wiki/Co
 
 ### Worked example - yoga instructions generator
 
-Start simpple - import the package, and create a controller. Each phrase object must belong to one and only one controller, so that if a $phrase is encountered we can turn to it to ask it to look for such a prhase and render it.
+Start simple - import the package, and create a controller. Each phrase object must belong to one and only one controller, so that if a $phrase is encountered we can turn to it to ask it to look for such a prhase and render it.
 
 ```lang=py
 import langine

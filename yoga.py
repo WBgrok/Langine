@@ -122,4 +122,4 @@ ph = langine.phrase(
   ]
 )
 
-print ph.generate()
+print(ph.generate())
